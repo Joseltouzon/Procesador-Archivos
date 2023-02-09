@@ -2,7 +2,7 @@
 
 $file = $_FILES['file']['name'];
 
-$destino = 'archivos_rend_cob/' . $file;
+$destino = 'archivos_rend_rev/' . $file;
 
 move_uploaded_file($_FILES['file']['tmp_name'], $destino);
 
@@ -23,7 +23,7 @@ $totalTrans = count($fileRows);
                 <th style="text-align: center;"><b>Identificador del Cliente</b></th>
                 <th style="text-align: center;"><b>Monto</b></th>
                 <th style="text-align: center;"><b>Fecha de Pago</b></th>
-                <th style="text-align: center;"><b>Medio de Pago</b></th>
+                
 
             </tr>
         </thead>
@@ -37,8 +37,8 @@ $totalTrans = count($fileRows);
 
                 $colum1 = substr($saltolinea, 4, 22);
                 $colum2 = substr($saltolinea, 77, -269);
-                $colum3 = substr($saltolinea, 89, -261);
-                $colum4 = substr($saltolinea, 284, -65);
+                $colum3 = substr($saltolinea, 67, -283);
+                
 
                 $totalMonto += $colum2;
             ?>
@@ -46,7 +46,7 @@ $totalTrans = count($fileRows);
                     <td style="text-align: center;"><?= $colum1 ?></td>
                     <td style="text-align: center;"><?= $colum2 ?></td>
                     <td style="text-align: center;"><?= $colum3 ?></td>
-                    <td style="text-align: center;"><?= $colum4 ?></td>
+                    
 
                 </tr>
 
